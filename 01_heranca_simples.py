@@ -10,6 +10,9 @@ class Veiculo:
         print("ligando o motor")
         print("VrummVrumm..")
 
+    def __str__(self):
+        return f"{self.__class__.__name__}: {', '.join([f'{chave}={valor}' for chave, valor in self.__dict__.items()])}"  
+
 class Motocicleta (Veiculo):
     pass
 
@@ -22,16 +25,13 @@ class Caminhao (Veiculo):
         self.carregado = carregado
   
     def esta_carregado(self):
-        print(f"{'Sim' if self.carregado else 'Não'} está carregado")
+        print(f"{'Sim' if self.carregado else 'Não'} estou carregado")
 
 
-#moto = Motocicleta("Branca", "gdk8a89", 2, "150cc")
-#moto.ligar_motor()
-
-#carro = Carro("Azul", "gdk8a99", 4, "4.0 bi-turbo")
-#scarro.ligar_motor()
-
+moto = Motocicleta("Branca", "gdk8a89", 2, "150cc")
+carro = Carro("Azul", "gdk8a99", 4, "4.0 bi-turbo")
 caminhao = Caminhao("Branca", "gdk8889", 8, "15.0 turbo", False)
-caminhao.ligar_motor()
-caminhao.esta_carregado()
+
+print(moto)
+print(carro)
 print(caminhao)
