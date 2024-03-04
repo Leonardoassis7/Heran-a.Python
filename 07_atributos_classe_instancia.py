@@ -18,7 +18,7 @@ mostrar_valores(aluno_1, aluno_2)
 
 Estudante.escola = "Python"
 
-mostrar_valores(aluno_1, aluno_2 )
+mostrar_valores(aluno_1, aluno_2 ) 
 
 
 # diferencia entre atributo de classe e atributo de instancia. ele é unico para cada objeto,
